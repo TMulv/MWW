@@ -1,0 +1,93 @@
+/* Mobile optimizations — overrides for screens < 768px */
+
+@media (max-width: 767px) {
+  /* Nav logo: shrink from 192px to a readable 80px */
+  nav .h-48,
+  header .h-48,
+  .h-48 {
+    height: 5rem !important; /* 80px */
+  }
+
+  /* Section vertical padding: 96px → 48px */
+  .py-24 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  /* Hero headline: 70px is large for 320px–375px phones */
+  .text-\[70px\] {
+    font-size: 48px !important;
+    line-height: 0.9 !important;
+  }
+
+  /* Section headings: 50px → 36px on mobile */
+  .text-\[50px\] {
+    font-size: 36px !important;
+    line-height: 0.9 !important;
+  }
+
+  /* About-section image: reduce min-height */
+  .min-h-\[400px\] {
+    min-height: 280px !important;
+  }
+
+  /* Decorative background watermark: scale it down so it doesn't bleed */
+  .text-\[120px\] {
+    font-size: 72px !important;
+  }
+
+  /* Prevent grid items stretching to full page height on mobile */
+  .grid .min-h-\[320px\] {
+    min-height: 240px !important;
+  }
+
+  /* Ensure images don't overflow on narrow screens */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Larger tap targets for inline links */
+  a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Restore block display for non-interactive elements */
+  p a, li a {
+    display: inline;
+    min-height: unset;
+  }
+}
+
+/* Extra small phones (≤ 375px) */
+@media (max-width: 375px) {
+  .text-\[70px\] {
+    font-size: 40px !important;
+  }
+
+  .text-\[50px\] {
+    font-size: 30px !important;
+  }
+
+  /* Reduce horizontal padding on very small screens */
+  .px-6 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+/* Touch devices: disable hover effects that don't translate well */
+@media (hover: none) and (pointer: coarse) {
+  /* Smooth scrolling for touch */
+  html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Improve tap responsiveness */
+  button, a, [role="button"] {
+    touch-action: manipulation;
+  }
+}
