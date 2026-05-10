@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-cream:      #f2ede6;
+  --color-bark:       #2e2016;
+  --color-sky:        #7a9bb5;
+  --color-terra:      #c47a5a;
+
+  --font-display: var(--font-cormorant);
+  --font-sans:    var(--font-montserrat);
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(5px); }
+}
+
+@utility animate-bob {
+  animation: bob 1.8s ease-in-out infinite;
+}
+
+@utility tag {
+  display: inline-block;
+  padding: 0.45em 1.25em;
+  border-radius: 9999px;
+  border-width: 1.5px;
+  border-style: solid;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  pointer-events: none;
+  user-select: none;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: theme(--color-cream);
+  color: theme(--color-bark);
+  font-family: var(--font-montserrat), sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
