@@ -1,0 +1,88 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f2ede6;
+  font-family: 'Montserrat', sans-serif;
+  color: #2e2016;
+}
+
+/* ── Hero ─────────────────────────────────────── */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 6vw;
+}
+
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* ── Tags (decorative, non-interactive) ──────── */
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  pointer-events: none;
+  user-select: none;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.45em 1.25em;
+  border-radius: 999px;
+  border: 1.5px solid currentColor;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: transparent;
+}
+
+.tag--blue       { color: #7a9bb5; border-color: #7a9bb5; }
+.tag--terracotta { color: #c47a5a; border-color: #c47a5a; }
+.tag--brown      { color: #2e2016; border-color: #2e2016; }
+
+/* ── Scroll cue ──────────────────────────────── */
+
+.scroll-cue {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+  color: #2e2016;
+  pointer-events: none;
+  user-select: none;
+}
+
+.scroll-cue__text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.55;
+}
+
+.scroll-cue__arrow {
+  font-size: 1.1rem;
+  opacity: 0.45;
+  animation: bob 1.8s ease-in-out infinite;
+  display: block;
+  margin-left: 0.1rem;
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(5px); }
+}
