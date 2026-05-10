@@ -10,7 +10,7 @@ Website for a small-batch maker selling heirloom toys and custom decor.
 
 ## Getting started
 
-```bash
+```
 npm install
 npm run dev
 ```
@@ -21,16 +21,17 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ```
 app/
-  layout.tsx      # Root layout — fonts, metadata
-  page.tsx        # Home page
-  globals.css     # Brand tokens, global styles, custom utilities
+  layout.tsx       # Root layout — fonts, metadata
+  page.tsx         # Home page
+  globals.css      # Brand tokens, global styles, custom utilities
 
 components/
-  Hero.tsx        # Landing hero section
+  Hero.tsx         # Landing hero section
 
-public/           # Static assets (images, icons)
+public/            # Static assets (images, icons)
 ```
 
 ## Deployment
 
-Deploy to [Vercel](https://vercel.com) — push to `main` and it builds automatically.
+Push to `main` — GitHub Actions builds the site and deploys to `gh-pages` automatically.
+Live at [mulveyswoodworking.com](https://mulveyswoodworking.com).
