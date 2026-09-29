@@ -17,7 +17,9 @@ const opt = <span className="font-normal text-muted"> (optional)</span>;
 export default function Checkout() {
   const { cart, total, clear } = useCart();
   const [needBy, setNeedBy] = useState("");
-  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "manual">("idle");
+  const [fallback, setFallback] = useState({ subject: "", body: "" });
+  const [copied, setCopied] = useState(false);
 
   const rows = cart.flatMap((line) => {
     const item = ITEMS.find((i) => i.id === line.id);
@@ -56,12 +58,11 @@ export default function Checkout() {
     const subject = `Order request: ${what} for ${order.name} (by ${order.needed_by})`;
 
     const done = () => { setStatus("sent"); clear(); window.scrollTo({ top: 0 }); };
+    // If the order can't be filed automatically, never pretend it went through:
+    // show the full request so the customer can copy it and email it.
+    const manual = () => { setFallback({ subject, body }); setStatus("manual"); window.scrollTo({ top: 0 }); };
 
-    if (!WEB3FORMS_KEY && !ORDER_ENDPOINT) {
-      window.location.assign(`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`);
-      done();
-      return;
-    }
+    if (!ORDER_ENDPOINT && !WEB3FORMS_KEY) { manual(); return; }
 
     setStatus("sending");
     try {
@@ -69,7 +70,7 @@ export default function Checkout() {
       if (ORDER_ENDPOINT) {
         sends.push(fetch(ORDER_ENDPOINT, {
           method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(order),
-        }).then((r) => r.ok));
+        }).then((r) => r.ok).catch(() => false));
       }
       if (WEB3FORMS_KEY) {
         sends.push(fetch("https://api.web3forms.com/submit", {
@@ -79,13 +80,40 @@ export default function Checkout() {
             access_key: WEB3FORMS_KEY, subject, from_name: "Mulvey's Woodworking website",
             replyto: order.email, message: body,
           }),
-        }).then((r) => r.json()).then((j) => !!j.success));
+        }).then((r) => r.json()).then((j) => !!j.success).catch(() => false));
       }
       const results = await Promise.all(sends);
-      if (results.some(Boolean)) done(); else setStatus("error");
+      if (results.some(Boolean)) done(); else manual();
     } catch {
-      setStatus("error");
+      manual();
     }
+  }
+
+  if (status === "manual") {
+    const mailto = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(fallback.subject)}&body=${encodeURIComponent(fallback.body)}`;
+    return (
+      <main className="mx-auto max-w-[1440px] px-4 py-16 sm:px-8">
+        <div role="alert" className="max-w-2xl">
+          <h1 className="text-[clamp(2rem,4vw,3rem)] font-bold leading-[1] tracking-[-0.03em]">One more step</h1>
+          <p className="mt-5 text-[17px] leading-relaxed">
+            Your request didn&rsquo;t go through automatically. Copy it below and email it to{" "}
+            <a className="underline" href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>, and I&rsquo;ll
+            email you back to confirm the details, final price and timing.
+          </p>
+          <textarea readOnly value={fallback.body} rows={12} aria-label="Your request"
+            className="mt-6 w-full border border-[#cfcbc4] bg-frame p-4 font-mono text-[13px] leading-relaxed" />
+          <div className="mt-4 flex flex-wrap items-center gap-4">
+            <button type="button"
+              onClick={() => { navigator.clipboard?.writeText(`${fallback.subject}\n\n${fallback.body}`).then(() => setCopied(true)).catch(() => {}); }}
+              className="h-12 bg-ink px-8 text-[15px] font-medium text-white hover:bg-[#3a3a3a]">
+              {copied ? "Copied" : "Copy my request"}
+            </button>
+            <a href={mailto} className="text-[15px] underline">Open in my email app</a>
+            <button type="button" onClick={() => setStatus("idle")} className="text-[15px] text-muted underline">Back to checkout</button>
+          </div>
+        </div>
+      </main>
+    );
   }
 
   if (status === "sent") {
@@ -94,9 +122,8 @@ export default function Checkout() {
         <div role="status" className="max-w-xl">
           <h1 className="text-[clamp(2rem,4vw,3.25rem)] font-bold leading-[1] tracking-[-0.03em]">Thanks, request sent!</h1>
           <p className="mt-5 text-[17px] leading-relaxed text-muted">
-            {WEB3FORMS_KEY || ORDER_ENDPOINT
-              ? "I'll email you to confirm the details, final price and timing. Check your spam folder if you don't see it in a day or two."
-              : "Your email app should have opened with everything filled in. Hit send there, and I'll email you back to confirm the details, final price and timing."}
+            I&rsquo;ll email you to confirm the details, final price and timing. Check your spam folder
+            if you don&rsquo;t see it in a day or two.
           </p>
           <Link href="/#work" className="mt-8 inline-flex h-12 items-center bg-ink px-8 text-[15px] font-medium text-white hover:bg-[#3a3a3a]">
             Back to the work
@@ -207,11 +234,6 @@ export default function Checkout() {
               className="mt-5 h-13 w-full bg-ink text-[16px] font-medium text-white transition-colors hover:bg-[#3a3a3a] disabled:cursor-wait disabled:opacity-60">
               {status === "sending" ? "Sending…" : "Submit request"}
             </button>
-            {status === "error" && (
-              <p role="alert" className="mt-3 text-[14px] text-[#9a3b2f]">
-                That didn&rsquo;t send. Try again, or email {CONTACT_EMAIL} directly.
-              </p>
-            )}
           </div>
         </aside>
       </div>
