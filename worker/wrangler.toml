@@ -1,0 +1,8 @@
+name = "mww-orders"
+main = "order-to-notion.js"
+compatibility_date = "2026-09-01"
+
+[vars]
+NOTION_DB_ID = "c121c4b209b548cda7a60281f835a89e"
+ALLOWED_ORIGINS = "https://mulveyswoodworking.com,https://www.mulveyswoodworking.com,http://localhost:3000"
+# NOTION_TOKEN is a secret: `npx wrangler secret put NOTION_TOKEN`
