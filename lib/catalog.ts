@@ -44,13 +44,13 @@ export type Item = {
 
 const ITEMS_RAW: Item[] = [
   // ── Puzzles
-  { id: "animal-family", name: "Animal Family Puzzles", category: "puzzles", price: 30, custom: true,
+  { id: "animal-family", name: "Animal Family Puzzles", category: "puzzles", price: 30, custom: true, model: "/models/animal-family.glb",
     description: "A parent animal with its babies fitted inside. Elephants, bears, cats, bunnies, kangaroos and more. Tell me which animal you want." },
   { id: "name-puzzle", name: "Family Name Puzzle", category: "puzzles", price: 40, custom: true,
     description: "One animal for each person in the family, with names engraved, on a wooden stand." },
-  { id: "word-puzzles", name: "Word Puzzles", category: "puzzles", price: 35, custom: true,
+  { id: "word-puzzles", name: "Word Puzzles", category: "puzzles", price: 35, custom: true, model: "/models/word-puzzles.glb",
     description: "The animal's name is cut out as the puzzle: HIPPO, ELEPHANT, BUTTERFLY. Painted or plain wood." },
-  { id: "owl-tree", name: "Owl & Tree Puzzle", category: "puzzles", price: 45,
+  { id: "owl-tree", name: "Owl & Tree Puzzle", category: "puzzles", price: 45, model: "/models/owl-tree.glb",
     description: "A tree puzzle with an owl on the branch. It stands up on its own, so it works as decoration too." },
   { id: "standing-puzzles", name: "Standing Scene Puzzles", category: "puzzles", price: 35,
     description: "Puzzles that stand up once they're put together, like the giraffe scene and the T-rex." },
@@ -60,15 +60,15 @@ const ITEMS_RAW: Item[] = [
     description: "A row of animals on one base: elephant, giraffe, bunny, turtle and a few others." },
 
   // ── Figurines
-  { id: "parent-child", name: "Parent & Child", category: "figurines", price: 35, custom: true,
+  { id: "parent-child", name: "Parent & Child", category: "figurines", price: 35, custom: true, model: "/models/parent-child.glb",
     description: "Two figures leaning in toward each other. People get these for Mother's Day, new parents and grandparents." },
   { id: "couple-heart", name: "Couple with Heart", category: "figurines", price: 40, custom: true,
     description: "Two figures holding a heart with your names or a date engraved on it. Good for weddings and anniversaries." },
   { id: "flower-bearers", name: "Flower Bearers", category: "figurines", price: 25,
     description: "A figure holding a small bouquet. Order one, or a set for the whole family." },
-  { id: "you-and-your-dog", name: "You & Your Dog", category: "figurines", price: 40, custom: true,
+  { id: "you-and-your-dog", name: "You & Your Dog", category: "figurines", price: 40, custom: true, model: "/models/you-and-your-dog.glb",
     description: "A person and their dog, face to face. I can shape the dog to look like your breed." },
-  { id: "hobby-figures", name: "Hobby Figures", category: "figurines", price: 30, custom: true,
+  { id: "hobby-figures", name: "Hobby Figures", category: "figurines", price: 30, custom: true, model: "/models/hobby-figures.glb",
     description: "A figure doing their thing: reading, riding, playing guitar. Tell me the hobby." },
   { id: "figures-on-stands", name: "Figures on Stands", category: "figurines", price: 30,
     description: "Figures on round wooden bases, dancing, hugging or playing ball." },
