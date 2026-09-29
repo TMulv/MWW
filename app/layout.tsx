@@ -1,31 +1,27 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Montserrat } from "next/font/google";
+import "@fontsource-variable/schibsted-grotesk";
 import "./globals.css";
-
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  style: ["normal", "italic"],
-});
-
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
-  subsets: ["latin"],
-  weight: ["400", "500"],
-});
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
-  title: "MWW — Heirloom Toys & Custom Decor",
-  description: "Small-batch heirloom toys and custom decor, made with care.",
+  metadataBase: new URL("https://mulveyswoodworking.com"),
+  title: {
+    default: "Mulvey's Woodworking | Heirloom toys for modern times",
+    template: "%s | Mulvey's Woodworking",
+  },
+  description:
+    "Wooden toys, puzzles, engraved gifts, flags and kids' furniture, made to order in a basement workshop in Northern NJ.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${montserrat.variable} h-full`}>
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en">
+      <body className="min-h-screen">
+        <SiteHeader />
+        {children}
+        <SiteFooter />
+      </body>
     </html>
   );
 }
