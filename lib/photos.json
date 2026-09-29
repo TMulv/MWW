@@ -3,62 +3,62 @@
   {
    "src": "/photos/animal-family-1.jpg",
    "thumb": "/photos/thumbs/animal-family-1.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   },
   {
    "src": "/photos/animal-family-2.jpg",
    "thumb": "/photos/thumbs/animal-family-2.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   },
   {
    "src": "/photos/animal-family-3.jpg",
    "thumb": "/photos/thumbs/animal-family-3.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   },
   {
    "src": "/photos/animal-family-4.jpg",
    "thumb": "/photos/thumbs/animal-family-4.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   },
   {
    "src": "/photos/animal-family-5.jpg",
    "thumb": "/photos/thumbs/animal-family-5.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   },
   {
    "src": "/photos/animal-family-6.jpg",
    "thumb": "/photos/thumbs/animal-family-6.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   },
   {
    "src": "/photos/animal-family-7.jpg",
    "thumb": "/photos/thumbs/animal-family-7.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   },
   {
    "src": "/photos/animal-family-8.jpg",
    "thumb": "/photos/thumbs/animal-family-8.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   },
   {
    "src": "/photos/animal-family-9.jpg",
    "thumb": "/photos/thumbs/animal-family-9.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   },
   {
    "src": "/photos/animal-family-10.jpg",
    "thumb": "/photos/thumbs/animal-family-10.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   }
  ],
  "name-puzzle": [
@@ -66,7 +66,7 @@
    "src": "/photos/name-puzzle-1.jpg",
    "thumb": "/photos/thumbs/name-puzzle-1.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   },
   {
    "src": "/photos/name-puzzle-2.jpg",
@@ -79,20 +79,20 @@
   {
    "src": "/photos/word-puzzles-1.jpg",
    "thumb": "/photos/thumbs/word-puzzles-1.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   },
   {
    "src": "/photos/word-puzzles-2.jpg",
    "thumb": "/photos/thumbs/word-puzzles-2.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   },
   {
    "src": "/photos/word-puzzles-3.jpg",
    "thumb": "/photos/thumbs/word-puzzles-3.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   }
  ],
  "owl-tree": [
@@ -100,33 +100,33 @@
    "src": "/photos/owl-tree-1.jpg",
    "thumb": "/photos/thumbs/owl-tree-1.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   },
   {
    "src": "/photos/owl-tree-2.jpg",
    "thumb": "/photos/thumbs/owl-tree-2.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   }
  ],
  "standing-puzzles": [
   {
    "src": "/photos/standing-puzzles-1.jpg",
    "thumb": "/photos/thumbs/standing-puzzles-1.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   },
   {
    "src": "/photos/standing-puzzles-2.jpg",
    "thumb": "/photos/thumbs/standing-puzzles-2.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   },
   {
    "src": "/photos/standing-puzzles-3.jpg",
    "thumb": "/photos/thumbs/standing-puzzles-3.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   }
  ],
  "bunny-families": [
@@ -134,13 +134,13 @@
    "src": "/photos/bunny-families-1.jpg",
    "thumb": "/photos/thumbs/bunny-families-1.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   },
   {
    "src": "/photos/bunny-families-2.jpg",
    "thumb": "/photos/thumbs/bunny-families-2.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   },
   {
    "src": "/photos/bunny-families-3.jpg",
@@ -152,13 +152,13 @@
    "src": "/photos/bunny-families-4.jpg",
    "thumb": "/photos/thumbs/bunny-families-4.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   },
   {
    "src": "/photos/bunny-families-5.jpg",
    "thumb": "/photos/thumbs/bunny-families-5.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   }
  ],
  "animal-parade": [
@@ -179,20 +179,20 @@
   {
    "src": "/photos/parent-child-1.jpg",
    "thumb": "/photos/thumbs/parent-child-1.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   },
   {
    "src": "/photos/parent-child-2.jpg",
    "thumb": "/photos/thumbs/parent-child-2.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   },
   {
    "src": "/photos/parent-child-3.jpg",
    "thumb": "/photos/thumbs/parent-child-3.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   }
  ],
  "couple-heart": [
@@ -200,33 +200,33 @@
    "src": "/photos/couple-heart-1.jpg",
    "thumb": "/photos/thumbs/couple-heart-1.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   },
   {
    "src": "/photos/couple-heart-2.jpg",
    "thumb": "/photos/thumbs/couple-heart-2.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   }
  ],
  "flower-bearers": [
   {
    "src": "/photos/flower-bearers-1.jpg",
    "thumb": "/photos/thumbs/flower-bearers-1.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   },
   {
    "src": "/photos/flower-bearers-2.jpg",
    "thumb": "/photos/thumbs/flower-bearers-2.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   },
   {
    "src": "/photos/flower-bearers-3.jpg",
    "thumb": "/photos/thumbs/flower-bearers-3.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   }
  ],
  "you-and-your-dog": [
@@ -234,13 +234,13 @@
    "src": "/photos/you-and-your-dog-1.jpg",
    "thumb": "/photos/thumbs/you-and-your-dog-1.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   },
   {
    "src": "/photos/you-and-your-dog-2.jpg",
    "thumb": "/photos/thumbs/you-and-your-dog-2.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   }
  ],
  "hobby-figures": [
@@ -248,39 +248,39 @@
    "src": "/photos/hobby-figures-1.jpg",
    "thumb": "/photos/thumbs/hobby-figures-1.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   },
   {
    "src": "/photos/hobby-figures-2.jpg",
    "thumb": "/photos/thumbs/hobby-figures-2.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   },
   {
    "src": "/photos/hobby-figures-3.jpg",
    "thumb": "/photos/thumbs/hobby-figures-3.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   },
   {
    "src": "/photos/hobby-figures-4.jpg",
    "thumb": "/photos/thumbs/hobby-figures-4.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   }
  ],
  "figures-on-stands": [
   {
    "src": "/photos/figures-on-stands-1.jpg",
    "thumb": "/photos/thumbs/figures-on-stands-1.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   },
   {
    "src": "/photos/figures-on-stands-2.jpg",
    "thumb": "/photos/thumbs/figures-on-stands-2.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   }
  ],
  "athlete-silhouette": [
@@ -288,13 +288,13 @@
    "src": "/photos/athlete-silhouette-1.jpg",
    "thumb": "/photos/thumbs/athlete-silhouette-1.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   },
   {
    "src": "/photos/athlete-silhouette-2.jpg",
    "thumb": "/photos/thumbs/athlete-silhouette-2.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   }
  ],
  "deer-figurines": [
@@ -308,19 +308,19 @@
    "src": "/photos/deer-figurines-2.jpg",
    "thumb": "/photos/thumbs/deer-figurines-2.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   },
   {
    "src": "/photos/deer-figurines-3.jpg",
    "thumb": "/photos/thumbs/deer-figurines-3.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   },
   {
    "src": "/photos/deer-figurines-4.jpg",
    "thumb": "/photos/thumbs/deer-figurines-4.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   },
   {
    "src": "/photos/deer-figurines-5.jpg",
@@ -332,33 +332,33 @@
    "src": "/photos/deer-figurines-6.jpg",
    "thumb": "/photos/thumbs/deer-figurines-6.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   }
  ],
  "reindeer-family": [
   {
    "src": "/photos/reindeer-family-1.jpg",
    "thumb": "/photos/thumbs/reindeer-family-1.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   },
   {
    "src": "/photos/reindeer-family-2.jpg",
    "thumb": "/photos/thumbs/reindeer-family-2.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   },
   {
    "src": "/photos/reindeer-family-3.jpg",
    "thumb": "/photos/thumbs/reindeer-family-3.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   },
   {
    "src": "/photos/reindeer-family-4.jpg",
    "thumb": "/photos/thumbs/reindeer-family-4.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   },
   {
    "src": "/photos/reindeer-family-5.jpg",
@@ -371,8 +371,8 @@
   {
    "src": "/photos/nativity-1.jpg",
    "thumb": "/photos/thumbs/nativity-1.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   }
  ],
  "name-ornaments": [
@@ -380,7 +380,7 @@
    "src": "/photos/name-ornaments-1.jpg",
    "thumb": "/photos/thumbs/name-ornaments-1.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   }
  ],
  "gnome-sign": [
@@ -388,7 +388,7 @@
    "src": "/photos/gnome-sign-1.jpg",
    "thumb": "/photos/thumbs/gnome-sign-1.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   }
  ],
  "reindeer-holder": [
@@ -396,13 +396,13 @@
    "src": "/photos/reindeer-holder-1.jpg",
    "thumb": "/photos/thumbs/reindeer-holder-1.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   },
   {
    "src": "/photos/reindeer-holder-2.jpg",
    "thumb": "/photos/thumbs/reindeer-holder-2.jpg",
-   "w": 739,
-   "h": 1600
+   "w": 1200,
+   "h": 1500
   }
  ],
  "cutting-boards": [
@@ -410,7 +410,7 @@
    "src": "/photos/cutting-boards-1.jpg",
    "thumb": "/photos/thumbs/cutting-boards-1.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   },
   {
    "src": "/photos/cutting-boards-2.jpg",
@@ -422,21 +422,21 @@
    "src": "/photos/cutting-boards-3.jpg",
    "thumb": "/photos/thumbs/cutting-boards-3.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   }
  ],
  "slate-signs": [
   {
    "src": "/photos/slate-signs-1.jpg",
    "thumb": "/photos/thumbs/slate-signs-1.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   },
   {
    "src": "/photos/slate-signs-2.jpg",
    "thumb": "/photos/thumbs/slate-signs-2.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   }
  ],
  "coasters": [
@@ -444,25 +444,25 @@
    "src": "/photos/coasters-1.jpg",
    "thumb": "/photos/thumbs/coasters-1.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   },
   {
    "src": "/photos/coasters-2.jpg",
    "thumb": "/photos/thumbs/coasters-2.jpg",
-   "w": 739,
-   "h": 1600
+   "w": 1200,
+   "h": 1500
   },
   {
    "src": "/photos/coasters-3.jpg",
    "thumb": "/photos/thumbs/coasters-3.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   },
   {
    "src": "/photos/coasters-4.jpg",
    "thumb": "/photos/thumbs/coasters-4.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   }
  ],
  "leather-journals": [
@@ -470,25 +470,25 @@
    "src": "/photos/leather-journals-1.jpg",
    "thumb": "/photos/thumbs/leather-journals-1.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   },
   {
    "src": "/photos/leather-journals-2.jpg",
    "thumb": "/photos/thumbs/leather-journals-2.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   },
   {
    "src": "/photos/leather-journals-3.jpg",
    "thumb": "/photos/thumbs/leather-journals-3.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   },
   {
    "src": "/photos/leather-journals-4.jpg",
    "thumb": "/photos/thumbs/leather-journals-4.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   }
  ],
  "crystal-keepsake": [
@@ -509,30 +509,30 @@
   {
    "src": "/photos/pet-bowls-1.jpg",
    "thumb": "/photos/thumbs/pet-bowls-1.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   }
  ],
  "smores-caddy": [
   {
    "src": "/photos/smores-caddy-1.jpg",
    "thumb": "/photos/thumbs/smores-caddy-1.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   },
   {
    "src": "/photos/smores-caddy-2.jpg",
    "thumb": "/photos/thumbs/smores-caddy-2.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   }
  ],
  "engraved-plaques": [
   {
    "src": "/photos/engraved-plaques-1.jpg",
    "thumb": "/photos/thumbs/engraved-plaques-1.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   }
  ],
  "pet-plaque": [
@@ -565,62 +565,62 @@
   {
    "src": "/photos/flag-classic-1.jpg",
    "thumb": "/photos/thumbs/flag-classic-1.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   },
   {
    "src": "/photos/flag-classic-2.jpg",
    "thumb": "/photos/thumbs/flag-classic-2.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   }
  ],
  "flag-thin-blue": [
   {
    "src": "/photos/flag-thin-blue-1.jpg",
    "thumb": "/photos/thumbs/flag-thin-blue-1.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   },
   {
    "src": "/photos/flag-thin-blue-2.jpg",
    "thumb": "/photos/thumbs/flag-thin-blue-2.jpg",
-   "w": 1600,
-   "h": 659
+   "w": 1200,
+   "h": 1500
   },
   {
    "src": "/photos/flag-thin-blue-3.jpg",
    "thumb": "/photos/thumbs/flag-thin-blue-3.jpg",
-   "w": 1600,
-   "h": 714
+   "w": 1200,
+   "h": 1500
   }
  ],
  "flag-thin-red": [
   {
    "src": "/photos/flag-thin-red-1.jpg",
    "thumb": "/photos/thumbs/flag-thin-red-1.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   },
   {
    "src": "/photos/flag-thin-red-2.jpg",
    "thumb": "/photos/thumbs/flag-thin-red-2.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   }
  ],
  "pull-ducks": [
   {
    "src": "/photos/pull-ducks-1.jpg",
    "thumb": "/photos/thumbs/pull-ducks-1.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   },
   {
    "src": "/photos/pull-ducks-2.jpg",
    "thumb": "/photos/thumbs/pull-ducks-2.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   }
  ],
  "step-stools": [
@@ -628,71 +628,71 @@
    "src": "/photos/step-stools-1.jpg",
    "thumb": "/photos/thumbs/step-stools-1.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   },
   {
    "src": "/photos/step-stools-2.jpg",
    "thumb": "/photos/thumbs/step-stools-2.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   },
   {
    "src": "/photos/step-stools-3.jpg",
    "thumb": "/photos/thumbs/step-stools-3.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   },
   {
    "src": "/photos/step-stools-4.jpg",
    "thumb": "/photos/thumbs/step-stools-4.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   }
  ],
  "picnic-table": [
   {
    "src": "/photos/picnic-table-1.jpg",
    "thumb": "/photos/thumbs/picnic-table-1.jpg",
-   "w": 1600,
-   "h": 1322
+   "w": 1200,
+   "h": 1500
   },
   {
    "src": "/photos/picnic-table-2.jpg",
    "thumb": "/photos/thumbs/picnic-table-2.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   },
   {
    "src": "/photos/picnic-table-3.jpg",
    "thumb": "/photos/thumbs/picnic-table-3.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   },
   {
    "src": "/photos/picnic-table-4.jpg",
    "thumb": "/photos/thumbs/picnic-table-4.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   },
   {
    "src": "/photos/picnic-table-5.jpg",
    "thumb": "/photos/thumbs/picnic-table-5.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   }
  ],
  "wagon": [
   {
    "src": "/photos/wagon-1.jpg",
    "thumb": "/photos/thumbs/wagon-1.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   },
   {
    "src": "/photos/wagon-2.jpg",
    "thumb": "/photos/thumbs/wagon-2.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   },
   {
    "src": "/photos/wagon-3.jpg",
@@ -725,20 +725,20 @@
   {
    "src": "/photos/toolbox-1.jpg",
    "thumb": "/photos/thumbs/toolbox-1.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   },
   {
    "src": "/photos/toolbox-2.jpg",
    "thumb": "/photos/thumbs/toolbox-2.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   },
   {
    "src": "/photos/toolbox-3.jpg",
    "thumb": "/photos/thumbs/toolbox-3.jpg",
-   "w": 1600,
-   "h": 1200
+   "w": 1200,
+   "h": 1500
   }
  ],
  "lantern-planter": [
@@ -816,7 +816,7 @@
    "src": "/photos/porch-pals-2.jpg",
    "thumb": "/photos/thumbs/porch-pals-2.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   },
   {
    "src": "/photos/porch-pals-3.jpg",
@@ -834,19 +834,19 @@
    "src": "/photos/porch-pals-5.jpg",
    "thumb": "/photos/thumbs/porch-pals-5.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   },
   {
    "src": "/photos/porch-pals-6.jpg",
    "thumb": "/photos/thumbs/porch-pals-6.jpg",
    "w": 1200,
-   "h": 1600
+   "h": 1500
   },
   {
    "src": "/photos/porch-pals-7.jpg",
    "thumb": "/photos/thumbs/porch-pals-7.jpg",
-   "w": 1600,
-   "h": 651
+   "w": 1200,
+   "h": 1500
   }
  ],
  "pet-sitters": [
