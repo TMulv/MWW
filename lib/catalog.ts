@@ -162,3 +162,7 @@ export const CONTACT_EMAIL = "mulveyswoodworking@gmail.com";
 // Get a free key at https://web3forms.com (enter the email above; the key gets emailed there).
 // Until a key is set, the form falls back to opening the visitor's email app.
 export const WEB3FORMS_KEY = "";
+
+// Optional: a small server endpoint that files each checkout as a page in the Notion "Orders"
+// database (keeps the Notion token off this public site). Leave empty until it's deployed.
+export const ORDER_ENDPOINT = "";

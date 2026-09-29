@@ -4,11 +4,11 @@ import { ShoppingBag } from "lucide-react";
 import { useCart } from "@/lib/cart";
 
 export default function CartButton() {
-  const { count, open } = useCart();
+  const { count, openCart } = useCart();
   return (
     <button
       type="button"
-      onClick={() => open({ kind: "cart" })}
+      onClick={openCart}
       aria-label={`Cart, ${count} ${count === 1 ? "item" : "items"}`}
       className="relative grid h-10 w-10 place-items-center hover:bg-frame"
     >

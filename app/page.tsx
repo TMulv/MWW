@@ -2,12 +2,11 @@ import { Suspense } from "react";
 import Link from "next/link";
 import { ArrowDown } from "lucide-react";
 import WorkGrid from "@/components/WorkGrid";
-import RequestButton from "@/components/RequestButton";
 import { CONTACT_EMAIL, INSTAGRAM, INSTAGRAM_HANDLE } from "@/lib/catalog";
 
 const STEPS = [
   { t: "Browse", d: "Look through what I've made for ideas." },
-  { t: "Request", d: "Request one piece or add a few to your cart and send them together. You don't pay anything yet." },
+  { t: "Request", d: "Add pieces to your cart and check out with your details and date. You don't pay anything yet." },
   { t: "Confirm", d: "I'll email you to go over the details, price and timing. Once you say yes, I start." },
   { t: "Pick up", d: "I'll let you know when it's done. You can pick it up, or we can talk about delivery or shipping." },
 ];
@@ -26,9 +25,9 @@ export default function Home() {
             workshop in Northern NJ. Everything is made to order.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-x-7 gap-y-4">
-            <RequestButton className="inline-flex h-12 items-center bg-ink px-7 text-[16px] font-medium text-white transition-colors hover:bg-[#3a3a3a]">
+            <Link href="/checkout" className="inline-flex h-12 items-center bg-ink px-7 text-[16px] font-medium text-white transition-colors hover:bg-[#3a3a3a]">
               Request a build
-            </RequestButton>
+            </Link>
             <Link href="#work" className="inline-flex items-center gap-2 text-[16px] underline">
               See the work <ArrowDown size={16} strokeWidth={1.75} aria-hidden />
             </Link>
@@ -104,7 +103,7 @@ export default function Home() {
               Request a build
             </h2>
             <p className="mt-5 max-w-md text-[17px] leading-relaxed">
-              Pick a piece, fill your cart, or describe something custom. Nothing is charged here.
+              Add pieces to your cart and check out, or describe something custom. Nothing is charged here.
               I&rsquo;ll email you to confirm the details, the price and whether I can make your date.
             </p>
             <p className="mt-6 text-[15px] text-muted">
@@ -112,9 +111,9 @@ export default function Home() {
               <a className="text-ink underline" href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
             </p>
           </div>
-          <RequestButton className="h-13 shrink-0 bg-ink px-10 py-4 text-[16px] font-medium text-white transition-colors hover:bg-[#3a3a3a]">
+          <Link href="/checkout" className="h-13 shrink-0 bg-ink px-10 py-4 text-[16px] font-medium text-white transition-colors hover:bg-[#3a3a3a]">
             Start a request
-          </RequestButton>
+          </Link>
         </div>
       </section>
     </main>

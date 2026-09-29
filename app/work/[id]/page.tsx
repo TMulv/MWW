@@ -47,7 +47,7 @@ export default async function WorkPage({ params }: { params: Promise<{ id: strin
 
           <p className="mt-6 max-w-[60ch] text-[17px] leading-relaxed">{item.description}</p>
 
-          <ItemActions id={item.id} />
+          <ItemActions id={item.id} name={item.name} custom={item.custom} />
 
           <dl className="mt-8 border-t border-line text-[15px]">
             <div className="grid grid-cols-[9rem_1fr] gap-4 border-b border-line py-4">
@@ -61,7 +61,7 @@ export default async function WorkPage({ params }: { params: Promise<{ id: strin
             {item.custom && (
               <div className="grid grid-cols-[9rem_1fr] gap-4 border-b border-line py-4">
                 <dt className="font-medium">Personalize it</dt>
-                <dd className="text-muted">Names, dates, colors or wording. Add them when you send your request.</dd>
+                <dd className="text-muted">Names, dates, colors or wording. Add them before you add it to your cart.</dd>
               </div>
             )}
           </dl>

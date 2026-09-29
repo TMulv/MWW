@@ -3,30 +3,30 @@
 import { createContext, useCallback, useContext, useEffect, useState } from "react";
 import { ITEMS } from "@/lib/catalog";
 
-export type Line = { id: string; qty: number; note: string };
-export type Mode = { kind: "cart" } | { kind: "single"; id: string } | { kind: "custom" };
+// One line per piece + personalization combo, like a normal store cart.
+export type Line = { key: string; id: string; qty: number; note: string };
 
 type Ctx = {
   cart: Line[];
   count: number;
-  add: (id: string) => void;
-  update: (id: string, patch: Partial<Line>) => void;
-  remove: (id: string) => void;
+  total: number;
+  add: (id: string, qty?: number, note?: string) => void;
+  setQty: (key: string, qty: number) => void;
+  remove: (key: string) => void;
   clear: () => void;
-  mode: Mode | null;
-  open: (m: Mode) => void;
-  close: () => void;
+  drawer: boolean;
+  openCart: () => void;
+  closeCart: () => void;
 };
 
 const CartCtx = createContext<Ctx | null>(null);
-const KEY = "mww-cart";
+const KEY = "mww-cart-v2";
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
   const [cart, setCart] = useState<Line[]>([]);
   const [loaded, setLoaded] = useState(false);
-  const [mode, setMode] = useState<Mode | null>(null);
+  const [drawer, setDrawer] = useState(false);
 
-  // Restore the cart, and support old "/?piece=id" links by opening that piece's request.
   useEffect(() => {
     try {
       const saved = JSON.parse(localStorage.getItem(KEY) ?? "[]");
@@ -35,8 +35,6 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       if (Array.isArray(saved)) setCart(saved.filter((l: Line) => ITEMS.some((i) => i.id === l.id)));
     } catch {}
     setLoaded(true);
-    const piece = new URLSearchParams(window.location.search).get("piece");
-    if (piece && ITEMS.some((i) => i.id === piece)) setMode({ kind: "single", id: piece });
   }, []);
 
   useEffect(() => {
@@ -44,22 +42,24 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     try { localStorage.setItem(KEY, JSON.stringify(cart)); } catch {}
   }, [cart, loaded]);
 
-  const add = useCallback((id: string) => {
-    setCart((c) => (c.some((l) => l.id === id)
-      ? c.map((l) => (l.id === id ? { ...l, qty: l.qty + 1 } : l))
-      : [...c, { id, qty: 1, note: "" }]));
+  const add = useCallback((id: string, qty = 1, note = "") => {
+    const key = `${id}::${note.trim().toLowerCase()}`;
+    setCart((c) => (c.some((l) => l.key === key)
+      ? c.map((l) => (l.key === key ? { ...l, qty: l.qty + qty } : l))
+      : [...c, { key, id, qty, note: note.trim() }]));
   }, []);
-  const update = useCallback((id: string, patch: Partial<Line>) => {
-    setCart((c) => c.map((l) => (l.id === id ? { ...l, ...patch } : l)));
-  }, []);
-  const remove = useCallback((id: string) => setCart((c) => c.filter((l) => l.id !== id)), []);
+  const setQty = useCallback((key: string, qty: number) =>
+    setCart((c) => c.map((l) => (l.key === key ? { ...l, qty: Math.max(1, qty) } : l))), []);
+  const remove = useCallback((key: string) => setCart((c) => c.filter((l) => l.key !== key)), []);
   const clear = useCallback(() => setCart([]), []);
+
+  const total = cart.reduce((s, l) => s + (ITEMS.find((i) => i.id === l.id)?.price ?? 0) * l.qty, 0);
 
   return (
     <CartCtx.Provider value={{
-      cart, count: cart.reduce((n, l) => n + l.qty, 0),
-      add, update, remove, clear,
-      mode, open: setMode, close: () => setMode(null),
+      cart, count: cart.reduce((n, l) => n + l.qty, 0), total,
+      add, setQty, remove, clear,
+      drawer, openCart: () => setDrawer(true), closeCart: () => setDrawer(false),
     }}>
       {children}
     </CartCtx.Provider>

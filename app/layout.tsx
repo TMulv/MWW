@@ -3,7 +3,7 @@ import "@fontsource-variable/schibsted-grotesk";
 import "./globals.css";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
-import RequestModal from "@/components/RequestModal";
+import CartDrawer from "@/components/CartDrawer";
 import { CartProvider } from "@/lib/cart";
 
 export const metadata: Metadata = {
@@ -24,7 +24,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <SiteHeader />
           {children}
           <SiteFooter />
-          <RequestModal />
+          <CartDrawer />
         </CartProvider>
       </body>
     </html>
