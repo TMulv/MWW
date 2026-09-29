@@ -5,6 +5,7 @@ import { ArrowLeft } from "lucide-react";
 import { CATEGORIES, ITEMS } from "@/lib/catalog";
 import Gallery from "@/components/Gallery";
 import ItemCard from "@/components/ItemCard";
+import ItemActions from "@/components/ItemActions";
 
 export const dynamicParams = false;
 
@@ -46,12 +47,7 @@ export default async function WorkPage({ params }: { params: Promise<{ id: strin
 
           <p className="mt-6 max-w-[60ch] text-[17px] leading-relaxed">{item.description}</p>
 
-          <Link
-            href={`/?piece=${item.id}#request`}
-            className="mt-8 flex h-13 w-full items-center justify-center bg-ink py-4 text-[16px] font-medium text-white transition-colors hover:bg-[#3a3a3a]"
-          >
-            Request this piece
-          </Link>
+          <ItemActions id={item.id} />
 
           <dl className="mt-8 border-t border-line text-[15px]">
             <div className="grid grid-cols-[9rem_1fr] gap-4 border-b border-line py-4">
@@ -65,7 +61,7 @@ export default async function WorkPage({ params }: { params: Promise<{ id: strin
             {item.custom && (
               <div className="grid grid-cols-[9rem_1fr] gap-4 border-b border-line py-4">
                 <dt className="font-medium">Personalize it</dt>
-                <dd className="text-muted">Names, dates, colors or wording. Add them to your request.</dd>
+                <dd className="text-muted">Names, dates, colors or wording. Add them when you send your request.</dd>
               </div>
             )}
           </dl>

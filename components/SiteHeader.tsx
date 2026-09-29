@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { INSTAGRAM } from "@/lib/catalog";
 import InstagramIcon from "./InstagramIcon";
+import CartButton from "./CartButton";
+import RequestButton from "./RequestButton";
 
 const NAV = [
   { href: "/#work", label: "The work" },
@@ -35,19 +37,19 @@ export default function SiteHeader() {
             <a href={INSTAGRAM} aria-label="Instagram" className="grid h-10 w-10 place-items-center hover:bg-frame">
               <InstagramIcon size={20} />
             </a>
-            <Link
-              href="/#request"
+            <CartButton />
+            <RequestButton
               className="hidden h-10 items-center whitespace-nowrap bg-ink px-4 text-[14px] font-medium text-white transition-colors hover:bg-[#3a3a3a] sm:inline-flex"
             >
               Request a build
-            </Link>
+            </RequestButton>
           </div>
         </div>
         <nav className="flex gap-5 overflow-x-auto border-t border-line px-4 py-2.5 text-[14px] md:hidden">
           {NAV.map((n) => (
             <Link key={n.href} href={n.href} className="whitespace-nowrap">{n.label}</Link>
           ))}
-          <Link href="/#request" className="whitespace-nowrap font-medium underline">Request a build</Link>
+          <RequestButton className="whitespace-nowrap font-medium underline">Request a build</RequestButton>
         </nav>
       </header>
     </>

@@ -3,6 +3,8 @@ import "@fontsource-variable/schibsted-grotesk";
 import "./globals.css";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import RequestModal from "@/components/RequestModal";
+import { CartProvider } from "@/lib/cart";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mulveyswoodworking.com"),
@@ -18,9 +20,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body className="min-h-screen">
-        <SiteHeader />
-        {children}
-        <SiteFooter />
+        <CartProvider>
+          <SiteHeader />
+          {children}
+          <SiteFooter />
+          <RequestModal />
+        </CartProvider>
       </body>
     </html>
   );
