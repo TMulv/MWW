@@ -165,4 +165,4 @@ export const WEB3FORMS_KEY = "";
 
 // Optional: a small server endpoint that files each checkout as a page in the Notion "Orders"
 // database (keeps the Notion token off this public site). Leave empty until it's deployed.
-export const ORDER_ENDPOINT = "";
+export const ORDER_ENDPOINT = "https://mww-orders.tyler-mulvey10.workers.dev";
