@@ -64,10 +64,10 @@ export default function WorkGrid() {
             </div>
           </div>
           <div className="flex shrink-0 items-center gap-3 text-[13px] text-muted">
-            <span className="tabular hidden sm:inline">{shown.length} pieces</span>
+            <span className="tabular hidden xl:inline">{shown.length} pieces</span>
             <label className="flex items-center gap-2">
-              <span className="sr-only sm:not-sr-only">Sort</span>
-              <select
+                            <select
+                aria-label="Sort"
                 value={sort}
                 onChange={(e) => setSort(e.target.value)}
                 className="h-10 border border-line bg-white px-2 text-[14px] text-ink"
