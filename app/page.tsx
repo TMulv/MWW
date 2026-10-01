@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import Link from "next/link";
 import { ArrowDown } from "lucide-react";
 import WorkGrid from "@/components/WorkGrid";
-import { CONTACT_EMAIL, INSTAGRAM, INSTAGRAM_HANDLE } from "@/lib/catalog";
+import { CATALOG_LABEL, CATALOG_PDF, CONTACT_EMAIL, INSTAGRAM, INSTAGRAM_HANDLE } from "@/lib/catalog";
 
 const STEPS = [
   { t: "Browse", d: "Look through what I've made for ideas." },
@@ -109,6 +109,10 @@ export default function Home() {
             <p className="mt-6 text-[15px] text-muted">
               Rather just email?{" "}
               <a className="text-ink underline" href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+            </p>
+            <p className="mt-2 text-[15px] text-muted">
+              Want to browse offline?{" "}
+              <a className="text-ink underline" href={CATALOG_PDF} download>Download the {CATALOG_LABEL} (PDF)</a>
             </p>
           </div>
           <Link href="/checkout" className="h-13 shrink-0 bg-ink px-10 py-4 text-[16px] font-medium text-white transition-colors hover:bg-[#3a3a3a]">

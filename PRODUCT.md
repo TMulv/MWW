@@ -10,14 +10,14 @@ web
 Two groups, about equal: people who met the maker at a Northern NJ farmers market and want a custom piece or a repeat, and gift shoppers who find her online (Instagram, word of mouth, search) and have never seen the work in person.
 
 ## Product Purpose
-Portfolio and request intake for Mulvey's Woodworking, a one-person, small-batch woodworking shop run by Tyler's mom out of her basement workshop. Visitors browse past work by category, see several photos, a short description and a starting price for each piece, and send a build request with a needed-by date. Success: a clear, complete request lands in mulveyswoodworking@gmail.com.
+Portfolio and request intake for Mulvey's Woodworking, a one-person, small-batch woodworking shop run by Tyler's mom out of her basement workshop. Visitors browse past work by category, see several photos, a short description and a starting price for each piece, and send a build request with a needed-by date. Success: a clear, complete request lands in hi@mulveyswoodworking.com.
 
 ## Positioning
 Everything is built to order by one person. Nothing is bought on the site; a request becomes an order only after she emails back and both sides agree on details, price and timing.
 
 ## Operating Context
 - Sells in person at farmers markets across Northern NJ on weekends.
-- Requests arrive by email (Web3Forms, fallback mailto) to mulveyswoodworking@gmail.com.
+- Requests arrive by email (Web3Forms, fallback mailto) to hi@mulveyswoodworking.com.
 - Static Next.js export deployed to GitHub Pages at mulveyswoodworking.com.
 - Catalog edited by hand in lib/catalog.ts.
 

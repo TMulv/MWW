@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Mail } from "lucide-react";
+import { Download, Mail } from "lucide-react";
 import InstagramIcon from "./InstagramIcon";
-import { CATEGORIES, CONTACT_EMAIL, INSTAGRAM, INSTAGRAM_HANDLE } from "@/lib/catalog";
+import { CATALOG_LABEL, CATALOG_PDF, CATEGORIES, CONTACT_EMAIL, INSTAGRAM, INSTAGRAM_HANDLE } from "@/lib/catalog";
 
 export default function SiteFooter() {
   return (
@@ -30,6 +30,11 @@ export default function SiteFooter() {
             <li>
               <a href={INSTAGRAM} className="inline-flex items-center gap-2 hover:underline">
                 <InstagramIcon /> {INSTAGRAM_HANDLE}
+              </a>
+            </li>
+            <li>
+              <a href={CATALOG_PDF} download className="inline-flex items-center gap-2 hover:underline">
+                <Download size={16} strokeWidth={1.75} aria-hidden /> {CATALOG_LABEL} (PDF)
               </a>
             </li>
           </ul>

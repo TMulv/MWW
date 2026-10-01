@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { INSTAGRAM } from "@/lib/catalog";
+import { CATALOG_PDF, INSTAGRAM } from "@/lib/catalog";
 import InstagramIcon from "./InstagramIcon";
 import CartButton from "./CartButton";
 
@@ -22,6 +22,7 @@ export default function SiteHeader() {
             {NAV.map((n) => (
               <Link key={n.href} href={n.href} className="hover:underline">{n.label}</Link>
             ))}
+            <a href={CATALOG_PDF} download className="hover:underline">Catalog</a>
           </nav>
           <Link
             href="/"
@@ -49,6 +50,7 @@ export default function SiteHeader() {
           {NAV.map((n) => (
             <Link key={n.href} href={n.href} className="whitespace-nowrap">{n.label}</Link>
           ))}
+          <a href={CATALOG_PDF} download className="whitespace-nowrap">Catalog</a>
           <Link href="/checkout" className="whitespace-nowrap font-medium underline">Request a build</Link>
         </nav>
       </header>
