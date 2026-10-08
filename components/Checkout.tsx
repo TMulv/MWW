@@ -228,7 +228,7 @@ export default function Checkout() {
             )}
             <p className="mt-4 text-[13px] leading-relaxed text-muted">
               Nothing is charged online. After you submit, I&rsquo;ll email you to confirm the
-              details, final price and timing. Prices are starting points and depend on size, wood and finish.
+              details, final price and timing. Prices are starting points and depend on the details.
             </p>
             <button type="submit" form="checkout" disabled={status === "sending"}
               className="mt-5 h-13 w-full bg-ink text-[16px] font-medium text-white transition-colors hover:bg-[#3a3a3a] disabled:cursor-wait disabled:opacity-60">

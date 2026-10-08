@@ -26,7 +26,7 @@ export type CategoryId =
 export const CATEGORIES: { id: CategoryId; label: string; dot: string; blurb: string }[] = [
   { id: "puzzles", label: "Puzzles", dot: "#7f9a86", blurb: "Animal families and word puzzles, cut on the scroll saw." },
   { id: "figurines", dot: "#e0917c", label: "Figurines", blurb: "Small wooden figures of people and animals. Most can be personalized." },
-  { id: "engraving", dot: "#2f4057", label: "Engraving & Glass", blurb: "Laser engraving on slate, wood, leather and crystal." },
+  { id: "engraving", dot: "#2f4057", label: "Engraving & Glass", blurb: "Laser engraving on slate, wood, leather, drinkware and crystal." },
   { id: "flags", dot: "#b8453a", label: "Flags", blurb: "Wooden flags, torched and painted by hand." },
   { id: "kids", dot: "#d9a53c", label: "Kids & Toys", blurb: "Step stools, picnic tables, wagons and pull toys." },
   { id: "home-garden", dot: "#6f9ab5", label: "Home & Garden", blurb: "Planters, porch animals and outdoor pieces." },
@@ -85,6 +85,8 @@ const ITEMS_RAW: Item[] = [
     description: "Garden signs, house signs and pet memorials engraved on slate." },
   { id: "coasters", name: "Slate Coaster Set", category: "engraving", price: 20, custom: true, model: "/models/coasters.glb",
     description: "A set of four slate coasters, or $6 each if you just want one or two. Monograms, pet portraits or a funny line." },
+  { id: "wine-tumbler", name: "12 oz Insulated Wine Tumbler", category: "engraving", price: 16, custom: true,
+    description: "A stemless, double-wall vacuum insulated stainless steel tumbler for wine, coffee, cocktails and other hot or cold drinks. Includes a lid, straw and straw brush. Shown with an engraved message; tell me what you'd like on yours." },
   { id: "leather-journals", name: "Monogrammed Journals", category: "engraving", price: 25, custom: true, model: "/models/leather-journals.glb",
     description: "Lined journals with your initials engraved on the cover. They come in a gift box." },
   { id: "crystal-keepsake", name: "3D Crystal Photo Keepsake", category: "engraving", price: 55, custom: true,

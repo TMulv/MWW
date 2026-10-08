@@ -56,7 +56,7 @@ export default async function WorkPage({ params }: { params: Promise<{ id: strin
             </div>
             <div className="grid grid-cols-[9rem_1fr] gap-4 border-b border-line py-4">
               <dt className="font-medium">Price</dt>
-              <dd className="text-muted">The final price depends on size, wood and finish. I&rsquo;ll confirm it by email.</dd>
+              <dd className="text-muted">The final price depends on the details. I&rsquo;ll confirm it by email.</dd>
             </div>
             {item.custom && (
               <div className="grid grid-cols-[9rem_1fr] gap-4 border-b border-line py-4">

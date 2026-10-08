@@ -473,6 +473,20 @@
    "h": 1500
   }
  ],
+ "wine-tumbler": [
+  {
+   "src": "/photos/wine-tumbler-1.jpg",
+   "thumb": "/photos/thumbs/wine-tumbler-1.jpg",
+   "w": 1200,
+   "h": 1500
+  },
+  {
+   "src": "/photos/wine-tumbler-2.jpg",
+   "thumb": "/photos/thumbs/wine-tumbler-2.jpg",
+   "w": 1200,
+   "h": 1500
+  }
+ ],
  "leather-journals": [
   {
    "src": "/photos/leather-journals-1.jpg",
