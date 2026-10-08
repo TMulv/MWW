@@ -391,6 +391,14 @@
    "h": 1500
   }
  ],
+ "holiday-candle": [
+  {
+   "src": "/photos/holiday-candle-1.jpg",
+   "thumb": "/photos/thumbs/holiday-candle-1.jpg",
+   "w": 1200,
+   "h": 1500
+  }
+ ],
  "reindeer-holder": [
   {
    "src": "/photos/reindeer-holder-1.jpg",
