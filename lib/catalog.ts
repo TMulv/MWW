@@ -143,6 +143,8 @@ const ITEMS_RAW: Item[] = [
     description: "A standing wooden reindeer that holds holiday cards or mail." },
   { id: "gnome-sign", name: "Seasonal Gnome Sign", category: "holiday", price: 30,
     description: "A gnome holding a sign. I can change the message for any holiday." },
+  { id: "holiday-candle", name: "Holiday Candle Lantern", category: "holiday", price: 25,
+    description: "A wooden lantern with a battery candle inside, greenery at the base and a plaid bow on the wire handle. Set it on a mantel or hang it up. Batteries needed." },
 ];
 
 export const ITEMS = ITEMS_RAW.map((it) => ({
