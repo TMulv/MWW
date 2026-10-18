@@ -11,7 +11,7 @@ import photos from "./photos.json";
  * ─────────────────────────────────────────────────────────────
  */
 
-export type Photo = { src: string; thumb: string; w: number; h: number };
+export type Photo = { src: string; thumb: string; w: number; h: number; cutout?: boolean };
 
 export type CategoryId =
   | "puzzles"

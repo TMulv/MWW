@@ -12,7 +12,7 @@ export default function ItemCard({ item, priority = false }: { item: CatalogItem
           src={a.thumb}
           alt={item.name}
           loading={priority ? "eager" : "lazy"}
-          className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-[var(--ease-out-expo)] group-hover:scale-[1.03]"
+          className={`absolute inset-0 h-full w-full ${a.cutout ? "object-contain p-4" : "object-cover"} transition-transform duration-700 ease-[var(--ease-out-expo)] group-hover:scale-[1.03]`}
         />
         {b && (
           // eslint-disable-next-line @next/next/no-img-element
@@ -20,7 +20,7 @@ export default function ItemCard({ item, priority = false }: { item: CatalogItem
             src={b.thumb}
             alt=""
             loading="lazy"
-            className="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+            className={`absolute inset-0 h-full w-full ${b.cutout ? "object-contain p-4" : "object-cover"} opacity-0 transition-opacity duration-500 group-hover:opacity-100`}
           />
         )}
         {item.model && (

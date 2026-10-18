@@ -927,30 +927,34 @@
  ],
  "turkeys": [
   {
-   "src": "/photos/turkeys-1.jpg",
-   "thumb": "/photos/thumbs/turkeys-1.jpg",
+   "src": "/photos/turkeys-1-cutout.png",
+   "thumb": "/photos/thumbs/turkeys-1-cutout.png",
    "w": 1200,
-   "h": 1600
+   "h": 1310,
+   "cutout": true
   },
   {
-   "src": "/photos/turkeys-2.jpg",
-   "thumb": "/photos/thumbs/turkeys-2.jpg",
-   "w": 1200,
-   "h": 1600
+   "src": "/photos/turkeys-2-cutout.png",
+   "thumb": "/photos/thumbs/turkeys-2-cutout.png",
+   "w": 1199,
+   "h": 1312,
+   "cutout": true
   },
   {
-   "src": "/photos/turkeys-3.jpg",
-   "thumb": "/photos/thumbs/turkeys-3.jpg",
-   "w": 1200,
-   "h": 1600
+   "src": "/photos/turkeys-3-cutout.png",
+   "thumb": "/photos/thumbs/turkeys-3-cutout.png",
+   "w": 1086,
+   "h": 1448,
+   "cutout": true
   }
  ],
  "angels": [
   {
-   "src": "/photos/angels-1.jpg",
-   "thumb": "/photos/thumbs/angels-1.jpg",
-   "w": 1200,
-   "h": 1600
+   "src": "/photos/angels-1-cutout.png",
+   "thumb": "/photos/thumbs/angels-1-cutout.png",
+   "w": 1086,
+   "h": 1448,
+   "cutout": true
   }
  ]
 }
