@@ -39,7 +39,7 @@ export type Item = {
   category: CategoryId;
   price: number; // "from $X"
   description: string;
-  variants?: { id: string; label: string; price: number; height?: number }[];
+  variants?: { id: string; label: string; price: number; height?: number; unit?: string }[];
   custom?: boolean; // shows a "Personalize it" note
   model?: string; // optional 3D model (.glb in /public/models), shows a "Spin in 3D" view
 };
@@ -136,12 +136,12 @@ const ITEMS_RAW: Item[] = [
     description: "Have an old cast-iron bench with rotted slats? I'll replace the wood and refinish it." },
 
   // ── Holiday
-  { id: "turkeys", name: "Wooden Turkeys", category: "holiday", price: 10, custom: true,
+  { id: "turkeys", name: "Wooden Turkeys", category: "holiday", price: 10, custom: true, model: "/models/turkeys.glb",
     description: "Standing wooden turkeys for your Thanksgiving table or fall display. $10 each, or $15 each with a name laser engraved.",
     variants: [{ id: "plain", label: "Plain", price: 10 }, { id: "engraved", label: "Laser-engraved name", price: 15 }] },
-  { id: "angels", name: "Wooden Angels", category: "holiday", price: 15,
-    description: "White wooden angels finished with a raffia bow. Choose a small, medium or large angel, or mix sizes for a seasonal display. Each angel is sold individually.",
-    variants: [{ id: "small", label: "Small · approx. 6″", price: 15, height: 6 }, { id: "medium", label: "Medium · approx. 15½″", price: 18, height: 15.5 }, { id: "large", label: "Large · approx. 18¾″", price: 23, height: 18.75 }] },
+  { id: "angels", name: "Wooden Angels", category: "holiday", price: 15, model: "/models/angels.glb",
+    description: "White wooden angels finished with a raffia bow. Choose a small, medium or large angel, or mix sizes for a seasonal display. Each angel is sold individually, or get all three together for $50.",
+    variants: [{ id: "small", label: "Small · approx. 6″", price: 15, height: 6 }, { id: "medium", label: "Medium · approx. 15½″", price: 18, height: 15.5 }, { id: "large", label: "Large · approx. 18¾″", price: 23, height: 18.75 }, { id: "set", label: "All three angels (small, medium and large)", price: 50, unit: "for the set" }] },
   { id: "reindeer-family", name: "Personalized Reindeer", category: "holiday", price: 20, custom: true,
     description: "One reindeer for each person, with their name engraved and a plaid bow." },
   { id: "name-ornaments", name: "Name Ornaments", category: "holiday", price: 15, custom: true,
@@ -186,5 +186,7 @@ export function getCartItem(id: string, variant?: string) {
   const item = ITEMS.find((i) => i.id === id);
   if (!item) return undefined;
   const option = item.variants?.find((v) => v.id === variant) ?? item.variants?.[0];
-  return option ? { ...item, name: `${item.name} — ${option.label}`, price: option.price } : item;
+  return option
+    ? { ...item, name: `${item.name} — ${option.label}`, price: option.price, unit: option.unit }
+    : { ...item, unit: undefined as string | undefined };
 }

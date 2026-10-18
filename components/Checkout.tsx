@@ -46,7 +46,7 @@ export default function Checkout() {
     };
     const pieces = custom
       ? "Something custom (see details)"
-      : order.items.map((i, n) => `${n + 1}. ${i.name} x${i.qty} (from $${i.from_price} each)${i.personalization ? `\n   Personalization: ${i.personalization}` : ""}`).join("\n");
+      : order.items.map((i, n) => `${n + 1}. ${i.name} x${i.qty} (from $${i.from_price} ${rows[n].item.unit ?? "each"})${i.personalization ? `\n   Personalization: ${i.personalization}` : ""}`).join("\n");
     const body = [
       `Name: ${order.name}`, `Email: ${order.email}`, `Phone: ${order.phone || "n/a"}`,
       `Needed by: ${order.needed_by}${rushed ? "  (under 2 weeks out)" : ""}`,
