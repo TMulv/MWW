@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { CONTACT_EMAIL, ITEMS, ORDER_ENDPOINT, WEB3FORMS_KEY } from "@/lib/catalog";
+import { CONTACT_EMAIL, getCartItem, ORDER_ENDPOINT, WEB3FORMS_KEY } from "@/lib/catalog";
 import { useCart } from "@/lib/cart";
 
 function isoDate(d: Date) {
@@ -22,7 +22,7 @@ export default function Checkout() {
   const [copied, setCopied] = useState(false);
 
   const rows = cart.flatMap((line) => {
-    const item = ITEMS.find((i) => i.id === line.id);
+    const item = getCartItem(line.id, line.variant);
     return item ? [{ line, item }] : [];
   });
   const custom = rows.length === 0;

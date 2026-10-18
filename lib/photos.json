@@ -924,5 +924,33 @@
    "w": 1600,
    "h": 739
   }
+ ],
+ "turkeys": [
+  {
+   "src": "/photos/turkeys-1.jpg",
+   "thumb": "/photos/thumbs/turkeys-1.jpg",
+   "w": 1200,
+   "h": 1600
+  },
+  {
+   "src": "/photos/turkeys-2.jpg",
+   "thumb": "/photos/thumbs/turkeys-2.jpg",
+   "w": 1200,
+   "h": 1600
+  },
+  {
+   "src": "/photos/turkeys-3.jpg",
+   "thumb": "/photos/thumbs/turkeys-3.jpg",
+   "w": 1200,
+   "h": 1600
+  }
+ ],
+ "angels": [
+  {
+   "src": "/photos/angels-1.jpg",
+   "thumb": "/photos/thumbs/angels-1.jpg",
+   "w": 1200,
+   "h": 1600
+  }
  ]
 }

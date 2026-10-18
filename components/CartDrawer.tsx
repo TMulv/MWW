@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { X } from "lucide-react";
-import { ITEMS } from "@/lib/catalog";
+import { getCartItem } from "@/lib/catalog";
 import { useCart } from "@/lib/cart";
 import QtyStepper from "./QtyStepper";
 
@@ -21,7 +21,7 @@ export default function CartDrawer() {
   }, [drawer]);
 
   const rows = cart.flatMap((line) => {
-    const item = ITEMS.find((i) => i.id === line.id);
+    const item = getCartItem(line.id, line.variant);
     return item ? [{ line, item }] : [];
   });
 

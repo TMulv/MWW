@@ -5,6 +5,7 @@ import { ArrowLeft } from "lucide-react";
 import { CATEGORIES, ITEMS } from "@/lib/catalog";
 import Gallery from "@/components/Gallery";
 import ItemCard from "@/components/ItemCard";
+import AngelSizeChart from "@/components/AngelSizeChart";
 import ItemActions from "@/components/ItemActions";
 
 export const dynamicParams = false;
@@ -46,6 +47,8 @@ export default async function WorkPage({ params }: { params: Promise<{ id: strin
           <p className="tabular mt-3 text-[20px]">From ${item.price}</p>
 
           <p className="mt-6 max-w-[60ch] text-[17px] leading-relaxed">{item.description}</p>
+
+          {item.id === "angels" && <AngelSizeChart />}
 
           <ItemActions id={item.id} name={item.name} custom={item.custom} />
 

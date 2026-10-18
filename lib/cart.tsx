@@ -1,16 +1,16 @@
 "use client";
 
 import { createContext, useCallback, useContext, useEffect, useState } from "react";
-import { ITEMS } from "@/lib/catalog";
+import { ITEMS, getCartItem } from "@/lib/catalog";
 
 // One line per piece + personalization combo, like a normal store cart.
-export type Line = { key: string; id: string; qty: number; note: string };
+export type Line = { key: string; id: string; qty: number; note: string; variant?: string };
 
 type Ctx = {
   cart: Line[];
   count: number;
   total: number;
-  add: (id: string, qty?: number, note?: string) => void;
+  add: (id: string, qty?: number, note?: string, variant?: string) => void;
   setQty: (key: string, qty: number) => void;
   remove: (key: string) => void;
   clear: () => void;
@@ -42,18 +42,18 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     try { localStorage.setItem(KEY, JSON.stringify(cart)); } catch {}
   }, [cart, loaded]);
 
-  const add = useCallback((id: string, qty = 1, note = "") => {
-    const key = `${id}::${note.trim().toLowerCase()}`;
+  const add = useCallback((id: string, qty = 1, note = "", variant?: string) => {
+    const key = `${id}::${variant ?? ""}::${note.trim().toLowerCase()}`;
     setCart((c) => (c.some((l) => l.key === key)
       ? c.map((l) => (l.key === key ? { ...l, qty: l.qty + qty } : l))
-      : [...c, { key, id, qty, note: note.trim() }]));
+      : [...c, { key, id, qty, note: note.trim(), variant }]));
   }, []);
   const setQty = useCallback((key: string, qty: number) =>
     setCart((c) => c.map((l) => (l.key === key ? { ...l, qty: Math.max(1, qty) } : l))), []);
   const remove = useCallback((key: string) => setCart((c) => c.filter((l) => l.key !== key)), []);
   const clear = useCallback(() => setCart([]), []);
 
-  const total = cart.reduce((s, l) => s + (ITEMS.find((i) => i.id === l.id)?.price ?? 0) * l.qty, 0);
+  const total = cart.reduce((s, l) => s + (getCartItem(l.id, l.variant)?.price ?? 0) * l.qty, 0);
 
   return (
     <CartCtx.Provider value={{
