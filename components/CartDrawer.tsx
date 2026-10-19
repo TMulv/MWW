@@ -60,7 +60,7 @@ export default function CartDrawer() {
                       <Link href={`/work/${item.id}`} onClick={closeCart} className="font-medium leading-snug hover:underline">{item.name}</Link>
                       <p className="tabular shrink-0 text-[15px]">${item.price * line.qty}</p>
                     </div>
-                    <p className="tabular mt-0.5 text-[13px] text-muted">From ${item.price} each</p>
+                    <p className="tabular mt-0.5 text-[13px] text-muted">From ${item.price} {item.unit ?? "each"}</p>
                     {line.note && <p className="mt-1.5 text-[14px] text-muted">&ldquo;{line.note}&rdquo;</p>}
                     <div className="mt-3 flex items-center gap-4">
                       <QtyStepper value={line.qty} onChange={(n) => setQty(line.key, n)} label={item.name} />

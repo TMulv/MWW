@@ -1,7 +1,10 @@
 import { ITEMS } from "@/lib/catalog";
 
 export default function AngelSizeChart() {
-  const sizes = ITEMS.find((item) => item.id === "angels")!.variants!;
+  const all = ITEMS.find((item) => item.id === "angels")!.variants!;
+  const sizes = all.filter((v) => v.height);
+  const bundle = all.find((v) => !v.height);
+  const separately = sizes.reduce((sum, v) => sum + v.price, 0);
   return (
     <section aria-labelledby="angel-sizes" className="mt-8 border-t border-line pt-6">
       <h2 id="angel-sizes" className="text-[20px] font-bold">Angel size guide</h2>
@@ -27,6 +30,12 @@ export default function AngelSizeChart() {
         <thead><tr className="border-b border-line"><th className="py-2 font-medium" scope="col">Size</th><th scope="col" className="font-medium">Approx. height</th><th scope="col" className="text-right font-medium">Price each</th></tr></thead>
         <tbody>{sizes.map((size) => <tr key={size.id} className="border-b border-line"><th scope="row" className="py-3 font-normal capitalize">{size.id}</th><td>{size.height === 6 ? '6″' : size.height === 15.5 ? '15½″' : '18¾″'}</td><td className="text-right tabular">${size.price}</td></tr>)}</tbody>
       </table>
+      {bundle && (
+        <p className="mt-4 text-[14px]">
+          All three together: <span className="tabular font-medium">${bundle.price}</span>{" "}
+          <span className="text-muted">(${separately} if bought separately)</span>
+        </p>
+      )}
       <p className="mt-3 text-[12px] text-muted">Illustration shows relative height; shapes are for reference. See the photo for the finished angels.</p>
     </section>
   );

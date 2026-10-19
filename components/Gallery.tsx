@@ -88,6 +88,10 @@ export default function Gallery({ name, photos, model }: { name: string; photos:
         )}
       </div>
 
+      {view === "3d" && (model === "/models/angels.glb" || model === "/models/turkeys.glb") && (
+        <p className="mt-3 text-[13px] text-muted">3D preview is an approximation. {model === "/models/angels.glb" ? "Use the size guide for angel heights." : "See the photos for the finished piece."}</p>
+      )}
+
       {view === "photos" && n > 1 && (
         <div className="mt-3 flex gap-2 overflow-x-auto pb-1">
           {photos.map((p, i) => (
