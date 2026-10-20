@@ -20,7 +20,7 @@ export default function ItemActions({ id, name, custom }: { id: string; name: st
     >
       {item?.variants && (
         <div>
-          <label htmlFor="variant" className="mb-1.5 block text-[14px] font-medium">{id === "angels" ? "Size" : "Finish"}</label>
+          <label htmlFor="variant" className="mb-1.5 block text-[14px] font-medium">{id === "angels" ? "Size" : id === "wooden-reindeer" ? "Style" : "Finish"}</label>
           <select id="variant" value={variant} onChange={(e) => { setVariant(e.target.value); setNote(""); }} className="h-12 w-full border border-[#cfcbc4] bg-white px-3.5">
             {item.variants.map((v) => <option key={v.id} value={v.id}>{v.label} — ${v.price} {v.unit ?? "each"}</option>)}
           </select>

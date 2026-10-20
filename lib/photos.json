@@ -956,5 +956,28 @@
    "h": 1448,
    "cutout": true
   }
+ ],
+ "wooden-reindeer": [
+  {
+   "src": "/photos/wooden-reindeer-1-cutout.png",
+   "thumb": "/photos/thumbs/wooden-reindeer-1-cutout.png",
+   "w": 1448,
+   "h": 1086,
+   "cutout": true
+  },
+  {
+   "src": "/photos/wooden-reindeer-2-cutout.png",
+   "thumb": "/photos/thumbs/wooden-reindeer-2-cutout.png",
+   "w": 1448,
+   "h": 1086,
+   "cutout": true
+  },
+  {
+   "src": "/photos/wooden-reindeer-3-cutout.png",
+   "thumb": "/photos/thumbs/wooden-reindeer-3-cutout.png",
+   "w": 1448,
+   "h": 1086,
+   "cutout": true
+  }
  ]
 }
