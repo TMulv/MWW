@@ -979,5 +979,13 @@
    "h": 1086,
    "cutout": true
   }
+ ],
+ "whiskey-glass": [
+  {
+   "src": "/photos/whiskey-glass-1.jpg",
+   "thumb": "/photos/thumbs/whiskey-glass-1.jpg",
+   "w": 1792,
+   "h": 1344
+  }
  ]
 }
