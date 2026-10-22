@@ -149,7 +149,7 @@ const ITEMS_RAW: Item[] = [
     description: "Two standing wooden reindeer styles: an openwork deer and a solid deer. Each stands approximately 6 inches tall and is sold individually for $15.",
     variants: [{ id: "openwork", label: "Openwork deer (left in photo)", price: 15, height: 6 }, { id: "solid", label: "Solid deer (right in photo)", price: 15, height: 6 }] },
   { id: "ornamental-reindeer", name: "Ornamental Reindeer", category: "holiday", price: 25,
-    description: "A resting reindeer cut on the scroll saw with swirling openwork through the body, in wood with a cherry finish. Approximately 9 inches tall and 8 inches long." },
+    description: "A resting reindeer cut on the scroll saw with swirling openwork through the body, with a cherry finish. Approximately 9 inches tall and 8 inches long." },
   { id: "reindeer-family", name: "Personalized Reindeer", category: "holiday", price: 20, custom: true,
     description: "One reindeer for each person, with their name engraved and a plaid bow." },
   { id: "name-ornaments", name: "Name Ornaments", category: "holiday", price: 15, custom: true,
