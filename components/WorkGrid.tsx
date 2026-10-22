@@ -37,7 +37,44 @@ export default function WorkGrid() {
       </div>
 
       <div className="sticky top-[6.5rem] z-30 -mx-4 mt-8 border-y border-line bg-white px-4 sm:-mx-8 sm:px-8 md:top-16">
-        <div className="flex items-center gap-4">
+        {/* Mobile: category + sort as two dropdowns */}
+        <div className="grid grid-cols-[minmax(0,3fr)_minmax(0,2fr)] gap-2 py-2 md:hidden">
+          <label className="relative block">
+            <span className="sr-only">Category</span>
+            <span
+              className="pointer-events-none absolute left-3 top-1/2 h-2.5 w-2.5 -translate-y-1/2 rounded-full"
+              style={{ background: current ? current.dot : "#141414" }}
+              aria-hidden
+            />
+            <select
+              value={cat ?? ""}
+              onChange={(e) => pick((e.target.value || null) as CategoryId | null)}
+              className="h-11 w-full border border-ink bg-white pl-7 pr-1 text-[15px] font-medium text-ink"
+            >
+              <option value="">Everything ({ITEMS.length})</option>
+              {CATEGORIES.map((c) => (
+                <option key={c.id} value={c.id}>
+                  {c.label} ({ITEMS.filter((i) => i.category === c.id).length})
+                </option>
+              ))}
+            </select>
+          </label>
+          <label className="block">
+            <span className="sr-only">Sort</span>
+            <select
+              value={sort}
+              onChange={(e) => setSort(e.target.value)}
+              className="h-11 w-full border border-line bg-white px-2 text-[15px] text-ink"
+            >
+              <option value="featured">Featured</option>
+              <option value="low">Price: low to high</option>
+              <option value="high">Price: high to low</option>
+              <option value="name">Name: A to Z</option>
+            </select>
+          </label>
+        </div>
+
+        <div className="hidden items-center gap-4 md:flex">
           <div className="min-w-0 flex-1 overflow-x-auto">
             <div role="tablist" aria-label="Categories" className="flex w-max gap-1 py-2">
               {[{ id: null, label: "Everything", dot: "#141414" }, ...CATEGORIES].map((c) => {
