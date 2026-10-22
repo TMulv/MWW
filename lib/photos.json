@@ -980,6 +980,20 @@
    "cutout": true
   }
  ],
+ "ornamental-reindeer": [
+  {
+   "src": "/photos/filigree-reindeer-1.jpg",
+   "thumb": "/photos/thumbs/filigree-reindeer-1.jpg",
+   "w": 1200,
+   "h": 1600
+  },
+  {
+   "src": "/photos/filigree-reindeer-2.jpg",
+   "thumb": "/photos/thumbs/filigree-reindeer-2.jpg",
+   "w": 1200,
+   "h": 1600
+  }
+ ],
  "whiskey-glass": [
   {
    "src": "/photos/whiskey-glass-1.jpg",
