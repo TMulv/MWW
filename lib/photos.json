@@ -513,6 +513,20 @@
    "h": 1500
   }
  ],
+ "luggage-tags": [
+  {
+   "src": "/photos/luggage-tags-1.jpg",
+   "thumb": "/photos/thumbs/luggage-tags-1.jpg",
+   "w": 1200,
+   "h": 1600
+  },
+  {
+   "src": "/photos/luggage-tags-2.jpg",
+   "thumb": "/photos/thumbs/luggage-tags-2.jpg",
+   "w": 1600,
+   "h": 1200
+  }
+ ],
  "crystal-keepsake": [
   {
    "src": "/photos/crystal-keepsake-1.jpg",

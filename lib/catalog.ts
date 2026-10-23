@@ -93,6 +93,8 @@ const ITEMS_RAW: Item[] = [
     variants: [{ id: "standard", label: "Standard · round bottom", price: 10 }] },
   { id: "leather-journals", name: "Monogrammed Journals", category: "engraving", price: 25, custom: true, model: "/models/leather-journals.glb",
     description: "Lined journals with your initials engraved on the cover. They come in a gift box." },
+  { id: "luggage-tags", name: "Engraved Luggage Tags", category: "engraving", price: 15, custom: true,
+    description: "Green leather luggage tags engraved with initials, each in a foam-lined black gift box. $15 each." },
   { id: "crystal-keepsake", name: "3D Crystal Photo Keepsake", category: "engraving", price: 55, custom: true,
     description: "Your photo engraved inside a crystal block, set on a lit wooden base. Usually pets, babies or memorials." },
   { id: "pet-bowls", name: "Pet Bowl Stands", category: "engraving", price: 25, custom: true, model: "/models/pet-bowls.glb",
