@@ -383,6 +383,14 @@
    "h": 1500
   }
  ],
+ "glass-ornament": [
+  {
+   "src": "/photos/glass-ornament-1.jpg",
+   "thumb": "/photos/thumbs/glass-ornament-1.jpg",
+   "w": 1200,
+   "h": 1600
+  }
+ ],
  "gnome-sign": [
   {
    "src": "/photos/gnome-sign-1.jpg",

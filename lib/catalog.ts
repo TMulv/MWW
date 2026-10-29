@@ -156,6 +156,8 @@ const ITEMS_RAW: Item[] = [
     description: "One reindeer for each person, with their name engraved and a plaid bow." },
   { id: "name-ornaments", name: "Name Ornaments", category: "holiday", price: 15, custom: true,
     description: "Wooden ornaments with a name and a small figure. Good for gift tags or a baby's first Christmas." },
+  { id: "glass-ornament", name: "Engraved Glass Ornament", category: "holiday", price: 12, custom: true,
+    description: "A round faceted glass ornament laser-engraved with your logo, name or design. Shown with the Hawthorne Volunteer Ambulance Corps logo. About 3.1 inches (8 cm) across and 0.19 inch (5 mm) thick. $12 each." },
   { id: "nativity", name: "Nativity Yard Display", category: "holiday", price: 125,
     description: "A large white nativity cutout for the yard or a church." },
   { id: "reindeer-holder", name: "Reindeer Card Holder", category: "holiday", price: 45,
