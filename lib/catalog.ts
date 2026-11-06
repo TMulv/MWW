@@ -111,8 +111,8 @@ const ITEMS_RAW: Item[] = [
     description: "A wooden American flag, torched and painted, in a wood frame. Tell me the size you need." },
   { id: "flag-thin-blue", name: "Fallen Police Officer Flag", category: "flags", price: 125, model: "/models/flag-thin-blue.glb",
     description: "Wooden flag with a blue stripe for fallen police officers and their families." },
-  { id: "flag-thin-red", name: "Thin Red Line Flag", category: "flags", price: 125, model: "/models/flag-thin-red.glb",
-    description: "The same wooden flag with a red stripe, for firefighters and their families." },
+  { id: "flag-thin-red", name: "Fallen Firefighter Flag", category: "flags", price: 125, model: "/models/flag-thin-red.glb",
+    description: "Wooden flag with a red stripe for fallen firefighters and their families." },
 
   // ── Kids & Toys
   { id: "pull-ducks", name: "Pull-Along Duck Family", category: "kids", price: 45, model: "/models/pull-ducks.glb",
