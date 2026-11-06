@@ -109,8 +109,8 @@ const ITEMS_RAW: Item[] = [
   // ── Flags
   { id: "flag-classic", name: "Rustic American Flag", category: "flags", price: 125, model: "/models/flag-classic.glb",
     description: "A wooden American flag, torched and painted, in a wood frame. Tell me the size you need." },
-  { id: "flag-thin-blue", name: "Thin Blue Line Flag", category: "flags", price: 125, model: "/models/flag-thin-blue.glb",
-    description: "The same wooden flag with a blue stripe, for police officers and their families." },
+  { id: "flag-thin-blue", name: "Fallen Police Officer Flag", category: "flags", price: 125, model: "/models/flag-thin-blue.glb",
+    description: "Wooden flag with a blue stripe for fallen police officers and their families." },
   { id: "flag-thin-red", name: "Thin Red Line Flag", category: "flags", price: 125, model: "/models/flag-thin-red.glb",
     description: "The same wooden flag with a red stripe, for firefighters and their families." },
 
