@@ -152,6 +152,8 @@ const ITEMS_RAW: Item[] = [
     variants: [{ id: "openwork", label: "Openwork deer (left in photo)", price: 15, height: 6 }, { id: "solid", label: "Solid deer (right in photo)", price: 15, height: 6 }] },
   { id: "ornamental-reindeer", name: "Ornamental Reindeer", category: "holiday", price: 25,
     description: "A resting reindeer cut on the scroll saw with swirling openwork through the body, with a cherry finish. Approximately 9 inches tall and 8 inches long." },
+  { id: "grinch-holder", name: "Grinch Ornament Holder", category: "holiday", price: 25,
+    description: "Hand-painted wooden holder, about 8½\" tall, with a hanging Grinch face ornament." },
   { id: "reindeer-family", name: "Personalized Reindeer", category: "holiday", price: 20, custom: true,
     description: "One reindeer for each person, with their name engraved and a plaid bow." },
   { id: "name-ornaments", name: "Name Ornaments", category: "holiday", price: 15, custom: true,

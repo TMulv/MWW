@@ -1016,6 +1016,20 @@
    "h": 1600
   }
  ],
+ "grinch-holder": [
+  {
+   "src": "/photos/grinch-holder-1.jpg",
+   "thumb": "/photos/thumbs/grinch-holder-1.jpg",
+   "w": 1200,
+   "h": 1600
+  },
+  {
+   "src": "/photos/grinch-holder-2.jpg",
+   "thumb": "/photos/thumbs/grinch-holder-2.jpg",
+   "w": 1200,
+   "h": 1600
+  }
+ ],
  "whiskey-glass": [
   {
    "src": "/photos/whiskey-glass-1.jpg",
