@@ -153,6 +153,8 @@ const ITEMS_RAW: Item[] = [
     description: "A resting reindeer cut on the scroll saw with swirling openwork through the body, with a cherry finish. Approximately 9 inches tall and 8 inches long." },
   { id: "grinch-holder", name: "Grinch Ornament Holder", category: "holiday", price: 25,
     description: "Hand-painted wooden holder, about 8½\" tall, with a hanging Grinch face ornament." },
+  { id: "tree-ornament-holder", name: "Curly Tree Ornament Holder", category: "holiday", price: 15, custom: true,
+    description: "A whimsical curled tree on a white base, about 6\" tall, with a hanging red ball ornament. $15 each. The matte-finish ornament can be engraved with a name." },
   { id: "reindeer-family", name: "Personalized Reindeer", category: "holiday", price: 20, custom: true,
     description: "One reindeer for each person, with their name engraved and a plaid bow." },
   { id: "name-ornaments", name: "Name Ornaments", category: "holiday", price: 15, custom: true,

@@ -1015,6 +1015,20 @@
    "h": 1600
   }
  ],
+ "tree-ornament-holder": [
+  {
+   "src": "/photos/tree-ornament-holder-1.jpg",
+   "thumb": "/photos/thumbs/tree-ornament-holder-1.jpg",
+   "w": 1200,
+   "h": 1600
+  },
+  {
+   "src": "/photos/tree-ornament-holder-2.jpg",
+   "thumb": "/photos/thumbs/tree-ornament-holder-2.jpg",
+   "w": 1600,
+   "h": 1200
+  }
+ ],
  "whiskey-glass": [
   {
    "src": "/photos/whiskey-glass-1.jpg",
