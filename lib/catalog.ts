@@ -164,6 +164,8 @@ const ITEMS_RAW: Item[] = [
     variants: [{ id: "white", label: "White", price: 13 }, { id: "red", label: "Red", price: 13 }, { id: "yellow", label: "Yellow", price: 13 }, { id: "green", label: "Green", price: 13 }, { id: "black", label: "Black", price: 13 }] },
   { id: "glass-ornament", name: "Engraved Glass Ornament", category: "holiday", price: 12, custom: true,
     description: "A round faceted glass ornament laser-engraved with your logo, name or design. Shown with the Hawthorne Volunteer Ambulance Corps logo. About 3.1 inches (8 cm) across and 0.19 inch (5 mm) thick. $12 each." },
+  { id: "hpd-glass-ornament", name: "HPD Glass Ornament", category: "holiday", price: 12,
+    description: "A round faceted glass ornament laser-engraved with the Hawthorne Police Department badge. About 3.1 inches (8 cm) across and 0.19 inch (5 mm) thick, with a twine hanger. $12 each." },
   { id: "nativity", name: "Nativity Yard Display", category: "holiday", price: 125,
     description: "A large white nativity cutout for the yard or a church." },
   { id: "reindeer-holder", name: "Reindeer Card Holder", category: "holiday", price: 45,

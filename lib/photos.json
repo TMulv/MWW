@@ -1044,5 +1044,13 @@
    "w": 1200,
    "h": 1600
   }
+ ],
+ "hpd-glass-ornament": [
+  {
+   "src": "/photos/hpd-glass-ornament-1.jpg",
+   "thumb": "/photos/thumbs/hpd-glass-ornament-1.jpg",
+   "w": 1200,
+   "h": 1600
+  }
  ]
 }
