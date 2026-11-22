@@ -1036,5 +1036,13 @@
    "w": 1792,
    "h": 2240
   }
+ ],
+ "family-name-ornament": [
+  {
+   "src": "/photos/family-name-ornament-1.jpg",
+   "thumb": "/photos/thumbs/family-name-ornament-1.jpg",
+   "w": 1200,
+   "h": 1600
+  }
  ]
 }
