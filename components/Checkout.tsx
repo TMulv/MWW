@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { CONTACT_EMAIL, getCartItem, ORDER_ENDPOINT, WEB3FORMS_KEY } from "@/lib/catalog";
+import { CONTACT_EMAIL, getCartItem, money, ORDER_ENDPOINT, WEB3FORMS_KEY } from "@/lib/catalog";
 import { useCart } from "@/lib/cart";
 
 function isoDate(d: Date) {
@@ -42,16 +42,16 @@ export default function Checkout() {
       needed_by: v("need_by"), rushed, delivery: v("delivery"),
       details: v("details"), budget: v("budget"),
       items: rows.map(({ line, item }) => ({ id: item.id, name: item.name, qty: line.qty, from_price: item.price, personalization: line.note })),
-      starting_total: total,
+      starting_total: Math.round(total * 100) / 100,
     };
     const pieces = custom
       ? "Something custom (see details)"
-      : order.items.map((i, n) => `${n + 1}. ${i.name} x${i.qty} (from $${i.from_price} ${rows[n].item.unit ?? "each"})${i.personalization ? `\n   Personalization: ${i.personalization}` : ""}`).join("\n");
+      : order.items.map((i, n) => `${n + 1}. ${i.name} x${i.qty} (from $${money(i.from_price)} ${rows[n].item.unit ?? "each"})${i.personalization ? `\n   Personalization: ${i.personalization}` : ""}`).join("\n");
     const body = [
       `Name: ${order.name}`, `Email: ${order.email}`, `Phone: ${order.phone || "n/a"}`,
       `Needed by: ${order.needed_by}${rushed ? "  (under 2 weeks out)" : ""}`,
       `Pickup / delivery: ${order.delivery}`, `Budget: ${order.budget || "not given"}`,
-      "", "Pieces:", pieces, ...(custom ? [] : ["", `Starting total: $${total}`]),
+      "", "Pieces:", pieces, ...(custom ? [] : ["", `Starting total: $${money(total)}`]),
       "", "Details:", order.details || "(none)",
     ].join("\n");
     const what = custom ? "custom piece" : rows.length === 1 ? rows[0].item.name : `${rows.length} pieces`;
@@ -216,14 +216,14 @@ export default function Checkout() {
                       <p className="text-[15px] font-medium leading-snug">{item.name}</p>
                       {line.note && <p className="mt-0.5 text-[13px] text-muted">&ldquo;{line.note}&rdquo;</p>}
                     </div>
-                    <p className="tabular text-[15px]">${item.price * line.qty}</p>
+                    <p className="tabular text-[15px]">${money(item.price * line.qty)}</p>
                   </li>
                 ))}
               </ul>
             )}
             {!custom && (
               <p className="tabular mt-3 flex justify-between border-t border-line pt-4 text-[17px] font-medium">
-                <span>Starting total</span><span>${total}</span>
+                <span>Starting total</span><span>${money(total)}</span>
               </p>
             )}
             <p className="mt-4 text-[13px] leading-relaxed text-muted">

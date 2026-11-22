@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { X } from "lucide-react";
-import { getCartItem } from "@/lib/catalog";
+import { getCartItem, money } from "@/lib/catalog";
 import { useCart } from "@/lib/cart";
 import QtyStepper from "./QtyStepper";
 
@@ -58,9 +58,9 @@ export default function CartDrawer() {
                   <div className="min-w-0">
                     <div className="flex items-baseline justify-between gap-3">
                       <Link href={`/work/${item.id}`} onClick={closeCart} className="font-medium leading-snug hover:underline">{item.name}</Link>
-                      <p className="tabular shrink-0 text-[15px]">${item.price * line.qty}</p>
+                      <p className="tabular shrink-0 text-[15px]">${money(item.price * line.qty)}</p>
                     </div>
-                    <p className="tabular mt-0.5 text-[13px] text-muted">From ${item.price} {item.unit ?? "each"}</p>
+                    <p className="tabular mt-0.5 text-[13px] text-muted">From ${money(item.price)} {item.unit ?? "each"}</p>
                     {line.note && <p className="mt-1.5 text-[14px] text-muted">&ldquo;{line.note}&rdquo;</p>}
                     <div className="mt-3 flex items-center gap-4">
                       <QtyStepper value={line.qty} onChange={(n) => setQty(line.key, n)} label={item.name} />
@@ -75,7 +75,7 @@ export default function CartDrawer() {
 
             <div className="border-t border-line px-5 py-5 sm:px-6">
               <p className="tabular flex justify-between text-[17px] font-medium">
-                <span>Starting total</span><span>${total}</span>
+                <span>Starting total</span><span>${money(total)}</span>
               </p>
               <p className="mt-2 text-[13px] leading-relaxed text-muted">
                 Nothing is charged online. After you check out, I&rsquo;ll email you to confirm the

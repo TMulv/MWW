@@ -5,7 +5,7 @@ import photos from "./photos.json";
  *  THE CATALOG. Edit this file to change what shows on the site.
  *
  *  • price: shown as "From $X". Starting prices confirmed by Mom (Oct 2026).
- *    Engraved business cards price is still TBD.
+ *    Engraved business cards: $1.25 each (Nov 2026).
  *  • Photos live in /public/photos and are mapped in photos.json.
  *  • Categories: change labels/blurbs in CATEGORIES below.
  * ─────────────────────────────────────────────────────────────
@@ -101,8 +101,8 @@ const ITEMS_RAW: Item[] = [
     description: "Raised wooden stands for your pet's food and water bowls, with their name engraved." },
   { id: "smores-caddy", name: "S'mores Caddy", category: "engraving", price: 40, custom: true, model: "/models/smores-caddy.glb",
     description: "A wooden tray with three slots for graham crackers, chocolate and marshmallows. Engraved with your family's name." },
-  { id: "engraved-plaques", name: "Engraved Business Cards", category: "engraving", price: 15, custom: true, model: "/models/engraved-plaques.glb",
-    description: "Business cards engraved with your name, logo and contact info." },
+  { id: "engraved-plaques", name: "Engraved Business Cards", category: "engraving", price: 1.25, custom: true, model: "/models/engraved-plaques.glb",
+    description: "Business cards engraved with your name, logo and contact info. $1.25 per card." },
   { id: "pet-plaque", name: "Pet Silhouette Plaque", category: "engraving", price: 45, custom: true, model: "/models/pet-plaque.glb",
     description: "Your dog's silhouette on a wood panel with their name. For a memorial I can add names and years." },
 
@@ -199,6 +199,9 @@ export const WEB3FORMS_KEY = "";
 // Optional: a small server endpoint that files each checkout as a page in the Notion "Orders"
 // database (keeps the Notion token off this public site). Leave empty until it's deployed.
 export const ORDER_ENDPOINT = "https://mww-orders.tyler-mulvey10.workers.dev";
+
+// Format a dollar amount: whole numbers stay as-is ("15"), others get cents ("1.25").
+export const money = (n: number) => (Number.isInteger(n) ? String(n) : n.toFixed(2));
 
 export function getCartItem(id: string, variant?: string) {
   const item = ITEMS.find((i) => i.id === id);

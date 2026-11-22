@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
-import { CATEGORIES, ITEMS } from "@/lib/catalog";
+import { CATEGORIES, ITEMS, money } from "@/lib/catalog";
 import Gallery from "@/components/Gallery";
 import ItemCard from "@/components/ItemCard";
 import AngelSizeChart from "@/components/AngelSizeChart";
@@ -44,7 +44,7 @@ export default async function WorkPage({ params }: { params: Promise<{ id: strin
           <h1 className="text-[clamp(2rem,3.6vw,3rem)] font-bold leading-[1.02] tracking-[-0.03em] text-balance">
             {item.name}
           </h1>
-          <p className="tabular mt-3 text-[20px]">From ${item.price}</p>
+          <p className="tabular mt-3 text-[20px]">From ${money(item.price)}</p>
 
           <p className="mt-6 max-w-[60ch] text-[17px] leading-relaxed">{item.description}</p>
 

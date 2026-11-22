@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CATEGORIES, type CatalogItem } from "@/lib/catalog";
+import { CATEGORIES, money, type CatalogItem } from "@/lib/catalog";
 
 export default function ItemCard({ item, priority = false }: { item: CatalogItem; priority?: boolean }) {
   const cat = CATEGORIES.find((c) => c.id === item.category)!;
@@ -29,7 +29,7 @@ export default function ItemCard({ item, priority = false }: { item: CatalogItem
       </div>
       <div className="mt-3 flex items-baseline justify-between gap-3">
         <h3 className="text-[15px] font-medium leading-snug group-hover:underline">{item.name}</h3>
-        <p className="tabular shrink-0 text-[15px]">From ${item.price}</p>
+        <p className="tabular shrink-0 text-[15px]">From ${money(item.price)}</p>
       </div>
       <p className="mt-1 flex items-center gap-2 text-[13px] text-muted">
         <span className="h-2 w-2 rounded-full" style={{ background: cat.dot }} aria-hidden />

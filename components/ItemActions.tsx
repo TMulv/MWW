@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useCart } from "@/lib/cart";
-import { ITEMS } from "@/lib/catalog";
+import { ITEMS, money } from "@/lib/catalog";
 import QtyStepper from "./QtyStepper";
 
 export default function ItemActions({ id, name, custom }: { id: string; name: string; custom?: boolean }) {
@@ -22,7 +22,7 @@ export default function ItemActions({ id, name, custom }: { id: string; name: st
         <div>
           <label htmlFor="variant" className="mb-1.5 block text-[14px] font-medium">{id === "angels" ? "Size" : id === "wooden-reindeer" || id === "whiskey-glass" ? "Style" : "Finish"}</label>
           <select id="variant" value={variant} onChange={(e) => { setVariant(e.target.value); setNote(""); }} className="h-12 w-full border border-[#cfcbc4] bg-white px-3.5">
-            {item.variants.map((v) => <option key={v.id} value={v.id}>{v.label} — ${v.price} {v.unit ?? "each"}</option>)}
+            {item.variants.map((v) => <option key={v.id} value={v.id}>{v.label} — ${money(v.price)} {v.unit ?? "each"}</option>)}
           </select>
         </div>
       )}
