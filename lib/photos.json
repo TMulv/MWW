@@ -1037,6 +1037,14 @@
    "h": 2240
   }
  ],
+ "flasks": [
+  {
+   "src": "/photos/flasks-1.jpg",
+   "thumb": "/photos/thumbs/flasks-1.jpg",
+   "w": 1269,
+   "h": 952
+  }
+ ],
  "family-name-ornament": [
   {
    "src": "/photos/family-name-ornament-1.jpg",
